@@ -210,3 +210,6 @@ document.addEventListener("keydown", (event) => {
     clearDisplay();
   }
 });
+
+// Initialize display
+updateDisplay();
