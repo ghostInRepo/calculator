@@ -48,3 +48,13 @@ const updateDisplay = () => {
     previousOperandElement.textContent = previousOperand;
   }
 };
+
+// Clear display
+const clearDisplay = () => {
+  currentOperand = "0";
+  previousOperand = "";
+  operation = undefined;
+  resetCurrentOperand = false;
+  errorMessageElement.textContent = "";
+  updateDisplay();
+};
