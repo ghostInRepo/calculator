@@ -37,3 +37,11 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.current-operand {
+  min-height: 40px;
+  font-size: 36px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
