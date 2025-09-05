@@ -61,3 +61,14 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+
+button {
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+  background-color: #2a2d37;
+  color: #fff;
+}
