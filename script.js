@@ -116,3 +116,40 @@ const chooseOperation = (nextOperation) => {
   errorMessageElement.textContent = "";
   updateDisplay();
 };
+
+// Calculate result
+const calculate = () => {
+  let computation;
+  const prev = parseFloat(previousOperand);
+  const current = parseFloat(currentOperand);
+
+  //Check if we have both numbers and an operation
+  if (isNaN(prev) || isNaN(current) || operation === undefined) return;
+
+  try {
+    computation = operate(operation, prev, current);
+
+    // Round long decimals to avoid overflow
+    if (!Number.isInteger(computation)) {
+      computation = Math.round(computation * 100000000) / 100000000;
+    }
+
+    // Check for very large numbers
+    if (computation.toString().length > 12) {
+      computation = computation.toExponential(6);
+    }
+
+    currentOperand = computation.toString();
+    operation = undefined;
+    previousOperand = "";
+    resetCurrentOperand = true;
+    errorMessageElement.textContent = "";
+  } catch (error) {
+    currentOperand = "0";
+    previousOperand = "";
+    operation = undefined;
+    errorMessageElement.textContent = error.message;
+  }
+
+  updateDisplay();
+};
