@@ -45,3 +45,10 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.error-message {
+  color: #ff5c8d;
+  font-size: 18px;
+  min-height: 24px;
+  margin-top: 8px;
+}
