@@ -102,3 +102,11 @@ button:active {
   background-color: #2a2d37;
   color: #fff;
 }
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  background-color: #22252d;
+}
