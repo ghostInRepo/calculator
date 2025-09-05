@@ -153,3 +153,10 @@ const calculate = () => {
 
   updateDisplay();
 };
+
+// Event listeners for buttons
+document.querySelectorAll("[data-number]").forEach((button) => {
+  button.addEventListener("click", () => {
+    appendNumber(button.getAttribute("data-number"));
+  });
+});
