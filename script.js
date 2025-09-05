@@ -97,3 +97,22 @@ const appendDecimal = () => {
 
   updateDisplay();
 };
+
+// Choose operation
+const chooseOperation = (nextOperation) => {
+  // If we already have an operation and numbers, calculate first
+  if (previousOperand !== "" && !resetCurrentOperand) {
+    calculate();
+  }
+
+  // If current operand is empty, use 0
+  if (currentOperand === "") {
+    currentOperand = "0";
+  }
+
+  previousOperand = currentOperand;
+  operation = nextOperation;
+  resetCurrentOperand = true;
+  errorMessageElement.textContent = "";
+  updateDisplay();
+};
