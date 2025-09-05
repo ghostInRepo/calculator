@@ -58,3 +58,14 @@ const clearDisplay = () => {
   errorMessageElement.textContent = "";
   updateDisplay();
 };
+
+// Delete last digit
+const deleteDigit = () => {
+  if (currentOperand.length === 1) {
+    currentOperand = "0";
+  } else {
+    currentOperand = currentOperand.slice(0, -1);
+  }
+
+  updateDisplay();
+};
