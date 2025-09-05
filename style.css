@@ -110,3 +110,13 @@ button:active {
   font-size: 14px;
   background-color: #22252d;
 }
+
+@media (max-width: 350px) {
+  .calculator {
+    width: 280px;
+  }
+
+  button {
+    padding: 16px;
+  }
+}
