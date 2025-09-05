@@ -160,3 +160,13 @@ document.querySelectorAll("[data-number]").forEach((button) => {
     appendNumber(button.getAttribute("data-number"));
   });
 });
+
+document.querySelector('[data-decimal]').addEventListener('click', () => {
+  appendDecimal();
+})
+
+document.querySelectorAll('[data-operator]').forEach(button => {
+  button.addEventListener('click', () => {
+    chooseOperation(button.getAttribute('data-operator'));
+  })
+})
