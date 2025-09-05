@@ -69,3 +69,19 @@ const deleteDigit = () => {
 
   updateDisplay();
 };
+
+// Append number
+const appendNumber = (number) => {
+  // If current operand is 0 or reset flag is set, replace it
+  if (currentOperand === "0" || resetCurrentOperand) {
+    currentOperand = number;
+    resetCurrentOperand = false;
+  } else {
+    // Prevent number from getting too long
+    if (currentOperand.length < 12) {
+      currentOperand += number;
+    }
+  }
+
+  updateDisplay();
+};
