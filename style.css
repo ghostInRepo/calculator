@@ -13,3 +13,11 @@ body {
   background: linear-gradient(135deg, #6e8efb, #a777e3);
   padding: 20px;
 }
+
+.calculator {
+  width: 320px;
+  background-color: #22252d;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
