@@ -85,3 +85,15 @@ const appendNumber = (number) => {
 
   updateDisplay();
 };
+
+//Append decimal point
+const appendDecimal = () => {
+  if (resetCurrentOperand) {
+    currentOperand = "0.";
+    resetCurrentOperand = false;
+  } else if (!currentOperand.includes(".")) {
+    currentOperand += ".";
+  }
+
+  updateDisplay();
+};
