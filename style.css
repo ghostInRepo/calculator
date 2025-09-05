@@ -21,3 +21,10 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 }
+
+.display {
+  padding: 30px 20px;
+  background-color: #22252d;
+  text-align: right;
+  color: white;
+}
