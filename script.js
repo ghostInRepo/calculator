@@ -161,12 +161,30 @@ document.querySelectorAll("[data-number]").forEach((button) => {
   });
 });
 
-document.querySelector('[data-decimal]').addEventListener('click', () => {
+document.querySelector("[data-decimal]").addEventListener("click", () => {
   appendDecimal();
-})
+});
 
-document.querySelectorAll('[data-operator]').forEach(button => {
-  button.addEventListener('click', () => {
-    chooseOperation(button.getAttribute('data-operator'));
-  })
-})
+document.querySelectorAll("[data-operator]").forEach((button) => {
+  button.addEventListener("click", () => {
+    chooseOperation(button.getAttribute("data-operator"));
+  });
+});
+
+document
+  .querySelector('[data-action="calculate"]')
+  .addEventListener("click", () => {
+    calculate();
+  });
+
+document
+  .querySelector('[data-action="clear"]')
+  .addEventListener("click", () => {
+    clearDisplay();
+  });
+
+document
+  .querySelector('[data-action="backspace"]')
+  .addEventListener("click", () => {
+    deleteDigit();
+  });
