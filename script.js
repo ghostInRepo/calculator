@@ -188,3 +188,25 @@ document
   .addEventListener("click", () => {
     deleteDigit();
   });
+
+// Keyboard support
+document.addEventListener("keydown", (event) => {
+  if (/[0-9]/.test(event.key)) {
+    appendNumber(event.key);
+  } else if (event.key === ".") {
+    appendDecimal();
+  } else if (event.key === "+" || event.key === "-") {
+    chooseOperation(event.key);
+  } else if (event.key === "*") {
+    chooseOperation("x");
+  } else if (event.key === "/") {
+    chooseOperation("÷");
+  } else if (event.key === "Enter" || event.key === "=") {
+    event.preventDefault();
+    calculate();
+  } else if (event.key === "Backspace") {
+    deleteDigit();
+  } else if (event.key === "Escape") {
+    clearDisplay();
+  }
+});
