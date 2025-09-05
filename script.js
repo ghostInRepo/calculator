@@ -38,3 +38,13 @@ const operate = (operator, a, b) => {
       return 0;
   }
 };
+
+// Update display
+const updateDisplay = () => {
+  currentOperandElement.textContent = currentOperand;
+  if (operation !== null) {
+    previousOperandElement.textContent = `${previousOperand} ${operation}`;
+  } else {
+    previousOperandElement.textContent = previousOperand;
+  }
+};
