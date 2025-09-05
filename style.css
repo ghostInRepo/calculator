@@ -77,3 +77,9 @@ button:active {
   transform: scale(0.95);
   opacity: 0.8;
 }
+
+.operator {
+  background-color: #2a2d37;
+  color: #ff5c8d;
+  font-weight: bold;
+}
